@@ -10,7 +10,7 @@ then
     \nfeat(CORE-1922): add comments\
     \nfix: handle events on blur (close #28)\
     \nPlease check the GIT commit submission specification for details: \
-    \nhttps://github.com/mole-org/git-hook/blob/style.md"
+    \nhttps://github.com/mole-org/git-hook/blob/master/style.md"
 
     exit 1
 fi
