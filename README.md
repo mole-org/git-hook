@@ -11,3 +11,8 @@ git config --global core.hooksPath $(pwd)
 ```sh
 git config --global --unset core.hooksPath 
 ```
+
+## Upgrade
+```sh
+git pull
+```
