@@ -82,7 +82,7 @@ fix(ABC-100 global): 修复checkbox不能复选的问题
 // 示例2 下面圆括号里的 common 为通用管理的名称
 fix(ABC-999 common): 修复字体过小的BUG，将通用管理下所有页面的默认字体大小修改为 14px
 // 示例3
-fix: value.length -> values.length
+fix(ABC-100): value.length -> values.length
 ```
 
 ### feat
