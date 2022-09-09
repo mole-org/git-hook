@@ -1,0 +1,23 @@
+#!/bin/bash
+LC_ALL=C
+
+LOCAL_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+
+VALID_BRANCH_REGEX="\
+^(\
+(QA|VERSION)-[0-9]{1,2}\\.[0-9]{1,2}\\.[0-9]{1,2}\\.x|\
+feature/[a-zA-Z-]+-[0-9]+|\
+master|main|dev
+)$\
+"
+
+message="There is something wrong with your branch name. \
+        \nBranch names in this project must adhere to this contract: $VALID_BRANCH_REGEX. \
+        \nYour commit will be rejected. You should rename your branch to a valid name and try again."
+
+if [[ ! $LOCAL_BRANCH =~ $VALID_BRANCH_REGEX ]]; then
+    echo -e "$message"
+    exit 1
+fi
+
+exit 0
