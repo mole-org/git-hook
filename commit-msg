@@ -4,7 +4,7 @@ LC_ALL=C
 
 commit_msg=$(cat $1)
 
-msg_re="^(feat|fix|docs|style|refactor|perf|test|workflow|build|ci|chore|release|workflow)(\([a-zA-Z-]+-[0-9]+.+\))?: .{1,200}"
+msg_re="^(feat|fix|docs|style|refactor|perf|test|workflow|build|ci|chore|release|workflow)(\([a-zA-Z-]+-[0-9]+.+\)): .{1,200}"
 
 if [[ ! $commit_msg =~ $msg_re ]]; then
     echo -e "\nIllegal commit message submission format, please use the correct format: \
